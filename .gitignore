@@ -1,8 +1,7 @@
 .sourcemaps/*
-
 .vscode/*
 www/build/*
-www/build/0.js
 www/.DS_Store
 .DS_Store
-www/build/vendor.js.map
+
+node_modules
