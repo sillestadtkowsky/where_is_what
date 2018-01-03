@@ -1,2 +1,8 @@
-www/build
-.sourcemaps/0.js.map
+.sourcemaps/*
+
+.vscode/*
+www/build/*
+www/build/0.js
+www/.DS_Store
+.DS_Store
+www/build/vendor.js.map
