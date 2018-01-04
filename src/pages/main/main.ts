@@ -13,7 +13,11 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class MainPage {
 
-  constructor(public navCtrl: NavController) { }
+  addCreateHome: boolean;
+
+  constructor(public navCtrl: NavController) {
+    this.addCreateHome = true;
+   }
 
   createHome() {
     this.navCtrl.push('CreateHomePage');
