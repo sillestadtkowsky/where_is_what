@@ -1,0 +1,13 @@
+<ion-content scroll="false">
+  <div class="splash-bg"></div>
+  <div class="splash-info">
+    <div class="splash-logo"></div>
+    <div class="splash-intro">
+      {{ 'Gesucht gefunden - who is what?' | translate }}
+    </div>
+  </div>
+  <div padding>
+    <button ng-if="false" ion-button block (click)="createHome()">{{ 'Erstelle deine Wohnung' | translate }}</button>
+    <button ion-button block (click)="viewHome()">{{ 'Suchen und finden' | translate }}</button>
+  </div>
+</ion-content>
