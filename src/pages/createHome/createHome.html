@@ -8,9 +8,11 @@
 
 
 <ion-content padding scroll="false">
-  <form *ngIf="form" [formGroup]="form">
-    <div class=''>Gib der Wohnung einen Namen</div> 
+  <h2 color="primary">Gib der Wohnung einen Namen</h2>
+  <form class="create-home-form" *ngIf="form" [formGroup]="form">
     <ion-input type="text" #fileInput  placeholder="name" formControlName="homeName"> </ion-input>
     <button ion-button block (click)="addHome()">{{ 'erzeugen' | translate }}</button>
   </form>
+
+  <wohnungen [value]="wohnungen"></wohnungen>
 </ion-content>
