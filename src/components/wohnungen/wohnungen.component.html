@@ -1,0 +1,8 @@
+<h2 color="primary">angelegte Wohnungen</h2>
+<ion-list class="wohnungen" *ngIf="value?.length > 0">
+    <li *ngFor="let wohnung of value" class="wohnung" (click)="openWohnung(wohnung)">
+    <span>{{ wohnung.name }}</span>
+    <span class="date">{{ wohnung.date }}</span>
+    </li>
+</ion-list>
+<p *ngIf="!value || value.length == 0">Es liegen noch keine Wohnungen vor</p>

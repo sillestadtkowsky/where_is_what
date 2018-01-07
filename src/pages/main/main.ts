@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
+import { WhoIsWhatProvider } from '../../providers/whoIsWhat.provider';
+import { Wohnung } from '../../models/wohnung.model';
 
 /**
  * Die Main Page ist die erste Seite welche angezeigt wir.
@@ -13,17 +15,21 @@ import { IonicPage, NavController } from 'ionic-angular';
 })
 export class MainPage {
 
-  addCreateHome: boolean;
+  private addCreateHome: boolean;
+  private wohnungen: Array<Wohnung>;
 
-  constructor(public navCtrl: NavController) {
+  constructor(
+    private navCtrl: NavController,
+    private wiwProvider: WhoIsWhatProvider
+  ) {
     this.addCreateHome = true;
    }
 
-  createHome() {
-    this.navCtrl.push('CreateHomePage');
+   ionViewWillEnter(): void {
+    this.wiwProvider.getWohnungen().then(wohnungen => this.wohnungen = wohnungen);
   }
 
-  viewHome() {
-    this.navCtrl.push('ViewHomePage');
+  createHome() {
+    this.navCtrl.push('CreateHomePage');
   }
 }
