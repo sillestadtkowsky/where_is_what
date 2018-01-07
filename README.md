@@ -1,4 +1,4 @@
-Who is what?
+Where is what?
 
 Dies APP soll dich dabei unterstützen, schnell in vergessen geratenen Dinge in deiner Wohnung wieder zu finden.
 Ein Beispiel:
