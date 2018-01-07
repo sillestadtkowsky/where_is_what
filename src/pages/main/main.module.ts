@@ -4,11 +4,13 @@ import { IonicPageModule } from 'ionic-angular';
 
 import { MainPage } from './main';
 import { WohnungenComponent } from '../../components/wohnungen/wohnungen.component';
+import { SplashComponent } from '../../components/splash/splash.component';
 
 @NgModule({
   declarations: [
     MainPage,
-    WohnungenComponent
+    WohnungenComponent,
+    SplashComponent
   ],
   imports: [
     IonicPageModule.forChild(MainPage),

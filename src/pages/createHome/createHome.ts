@@ -1,13 +1,10 @@
 import { Component } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
-import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
+import { FormGroup, FormControl} from '@angular/forms';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { Wohnung } from '../../models/wohnung.model';
 import { WhoIsWhatProvider } from '../../providers/whoIsWhat.provider';
 
-import { User } from '../../providers/providers';
-import { MainPage } from '../pages';
 
 @IonicPage()
 @Component({
