@@ -12,12 +12,12 @@ Hättest du dir das nur irgendwo notiert? Okay. Auch in deiner unübersichtliche
 
 Features:
 
-# Erstelle, überarbeite, entferne eine Wohnung
-# Erstelle, überarbeite, entferne Räume
-# Erstelle, überarbeite, entferne und benenne Schränke und Regale
-# Erstelle, überarbeite, entferne Dinge
-# Katalogisiere Dinge in deiner Wohnung in Räume und Schränke
-# Finde Dinge
-# Lass dir anzeigen, in welchem Raum und welchem Schrank das gesuchte zu finden ist.
-# Importiere Wohnungen samt erfassten Dingen in die APP auf ein anderes Gerät.
-# Zeige eien Übersicht aller erfasster Dinge
+- Erstelle, überarbeite, entferne eine Wohnung
+- Erstelle, überarbeite, entferne Räume
+- Erstelle, überarbeite, entferne und benenne Schränke und Regale
+- Erstelle, überarbeite, entferne Dinge
+- Katalogisiere Dinge in deiner Wohnung in Räume und Schränke
+- Finde Dinge
+- Lass dir anzeigen, in welchem Raum und welchem Schrank das gesuchte zu finden ist.
+- Importiere Wohnungen samt erfassten Dingen in die APP auf ein anderes Gerät.
+- Zeige eien Übersicht aller erfasster Dinge
