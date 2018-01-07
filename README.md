@@ -20,4 +20,4 @@ Features:
 - Finde Dinge
 - Lass dir anzeigen, in welchem Raum und welchem Schrank das gesuchte zu finden ist.
 - Importiere Wohnungen samt erfassten Dingen in die APP auf ein anderes Gerät.
-- Zeige eien Übersicht aller erfasster Dinge
+- Zeige eine Übersicht aller erfasster Dinge
