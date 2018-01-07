@@ -4,6 +4,8 @@ import { Storage } from '@ionic/storage';
 import { Injectable } from '@angular/core';
 import { Wohnung } from '../models/wohnung.model';
 
+import _ from 'lodash';
+
 @Injectable()
 export class WhoIsWhatProvider {
 
@@ -35,5 +37,13 @@ export class WhoIsWhatProvider {
                 .then(wohnungen => resolve(wohnungen ? wohnungen : new Array<Wohnung>()))
                 .catch(reject)
         });
+    }
+
+    private parseAll(raw: Array<any>) {
+        return raw.map(e => this.parse(raw));
+    }
+
+    private parse(raw: any): Wohnung {
+        return _.assign(new Wohnung(), raw);
     }
 }

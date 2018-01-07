@@ -14,5 +14,5 @@
 
 
 <ion-content padding>
-  {{wohnung | json}}
+  <p>{{wohnung?.raeume.length}} erfasste Räume mit {{ wohnung?.getGegenstandCount() }} zu findenden Dingen</p>
 </ion-content>
