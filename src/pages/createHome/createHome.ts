@@ -18,9 +18,9 @@ export class CreateHomePage {
 
   private name: string;
   private form: FormGroup;
-  private wohnungen: Array<Wohnung>;
 
   constructor(
+    private navCtl: NavController,
     private wiwProvider: WhoIsWhatProvider,
     private toaster: ToastController
   ) {
@@ -33,23 +33,21 @@ export class CreateHomePage {
     this.name = "?"
   }
 
-  ionViewWillEnter(): void {
-    this.wiwProvider.getWohnungen().then(wohnungen => this.wohnungen = wohnungen);
-  }
-
   public addHome() : void {
 
     this.wiwProvider.createWohnung(new Wohnung(this.form.controls['homeName'].value))
       .then(wohnung => {
         this.form.reset();
-        this.wohnungen.push(wohnung);
         this.toaster.create({
           closeButtonText: 'X',
-          dismissOnPageChange: true,
+          dismissOnPageChange: false,
           cssClass: 'success',
           position: 'top',
+          duration: 5000,
           message: 'Wohnung "' + wohnung.name + '" wurde erzeugt.'
         }).present();
+        
+        this.navCtl.pop();
       })
       .catch(error => {
         this.toaster.create({

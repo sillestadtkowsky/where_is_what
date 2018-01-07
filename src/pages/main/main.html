@@ -8,6 +8,6 @@
   </div>
   <div padding>
       <button *ngIf="addCreateHome"  ion-button block (click)="createHome()">{{ 'Erstelle deine Wohnung' | translate }}</button>
-      <button *ngIf="!addCreateHome" ion-button block (click)="viewHome()">{{ 'Suchen und finden' | translate }}</button>
   </div>
+  <wohnungen [value]="wohnungen"></wohnungen>
 </ion-content>

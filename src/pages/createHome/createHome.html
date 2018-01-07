@@ -1,6 +1,6 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>{{ 'Erzeuge deine Wohnung' | translate }}</ion-title>
   </ion-navbar>
 
@@ -13,6 +13,4 @@
     <ion-input type="text" #fileInput  placeholder="name" formControlName="homeName"> </ion-input>
     <button ion-button block (click)="addHome()">{{ 'erzeugen' | translate }}</button>
   </form>
-
-  <wohnungen [value]="wohnungen"></wohnungen>
 </ion-content>
