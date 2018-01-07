@@ -6,9 +6,6 @@ import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { Wohnung } from '../../models/wohnung.model';
 import { WhoIsWhatProvider } from '../../providers/whoIsWhat.provider';
 
-import { User } from '../../providers/providers';
-import { MainPage } from '../pages';
-
 @IonicPage()
 @Component({
   selector: 'page-createHome',
