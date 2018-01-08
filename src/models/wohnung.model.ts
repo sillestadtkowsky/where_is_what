@@ -12,19 +12,6 @@ export class Wohnung extends BaseEntity {
     
     public raeume: Array<Raum> = new Array<Raum>();
 
-    public getGegenstandCount() : number {
-        let result = 0;
-
-        if(this.raeume) {
-          this.raeume.forEach(raum => {
-            raum.schraenke.forEach(schrank => {
-              result += schrank.gegenstaende.length;
-            });
-          });
-        }
-    
-        return result;
-    }
 }
 
 export class Raum extends BaseEntity {
