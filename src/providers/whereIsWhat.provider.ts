@@ -9,9 +9,16 @@ import _ from 'lodash';
 @Injectable()
 export class WhereIsWhatProvider {
 
-    private static storageKey = 'storage';
+    private static storageKey = 'WhereIsWhatStorage';
 
     constructor(private storage: Storage) { }
+
+    public removeWohnung(){
+        return new Promise((resolve, reject) => {
+            this.storage.remove(WhereIsWhatProvider.storageKey)
+            this.storage.clear
+        });
+    }
 
     public createWohnung(wohnung: Wohnung): Promise<Wohnung> {
         return new Promise((resolve, reject) => {

@@ -15,18 +15,19 @@ import { Wohnung } from '../../models/wohnung.model';
 })
 export class MainPage {
 
-  private addCreateHome: boolean;
-  private wohnungen: Array<Wohnung>;
+  public wohnungen: Array<Wohnung>;
 
   constructor(
     private navCtrl: NavController,
     private wiwProvider: WhereIsWhatProvider
-  ) {
-    this.addCreateHome = true;
-   }
+  ) {}
 
-   ionViewWillEnter(): void {
+  ionViewWillEnter(): void {
     this.wiwProvider.getWohnungen().then(wohnungen => this.wohnungen = wohnungen);
+  }
+
+  public hasWohnung(): boolean{
+      return this.wiwProvider.getWohnungen.length>0
   }
 
   createHome() {
