@@ -4,7 +4,7 @@ import { FormBuilder, FormGroup, Validators, FormControl} from '@angular/forms';
 import { IonicPage, NavController, ToastController } from 'ionic-angular';
 
 import { Wohnung } from '../../models/wohnung.model';
-import { WhoIsWhatProvider } from '../../providers/whoIsWhat.provider';
+import { WhereIsWhatProvider } from '../../providers/whereIsWhat.provider';
 
 @IonicPage()
 @Component({
@@ -18,7 +18,7 @@ export class CreateHomePage {
 
   constructor(
     private navCtl: NavController,
-    private wiwProvider: WhoIsWhatProvider,
+    private wiwProvider: WhereIsWhatProvider,
     private toaster: ToastController
   ) {
     

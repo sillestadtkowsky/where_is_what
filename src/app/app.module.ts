@@ -10,7 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { WhoIsWhatProvider } from '../providers/whoIsWhat.provider';
+import { WhereIsWhatProvider } from '../providers/whereIsWhat.provider';
 
 
 // The translate loader needs to know where to load i18n files
@@ -44,7 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
     Camera,
     SplashScreen,
     StatusBar,
-    WhoIsWhatProvider,
+    WhereIsWhatProvider,
     // Keep this to enable Ionic's runtime error handling during development
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]

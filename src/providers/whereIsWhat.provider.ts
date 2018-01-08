@@ -7,7 +7,7 @@ import { Wohnung } from '../models/wohnung.model';
 import _ from 'lodash';
 
 @Injectable()
-export class WhoIsWhatProvider {
+export class WhereIsWhatProvider {
 
     private static storageKey = 'storage';
 
@@ -15,13 +15,13 @@ export class WhoIsWhatProvider {
 
     public createWohnung(wohnung: Wohnung): Promise<Wohnung> {
         return new Promise((resolve, reject) => {
-            this.storage.get(WhoIsWhatProvider.storageKey)
+            this.storage.get(WhereIsWhatProvider.storageKey)
                 .then(wohnungen => {
                     if(!wohnungen) {
                         wohnungen = new Array<Wohnung>();
                     }
                     wohnungen.push(wohnung);
-                    this.storage.set(WhoIsWhatProvider.storageKey, wohnungen)
+                    this.storage.set(WhereIsWhatProvider.storageKey, wohnungen)
                         .then(() => {
                             resolve(wohnung);
                         })
@@ -33,7 +33,7 @@ export class WhoIsWhatProvider {
 
     public getWohnungen(): Promise<Array<Wohnung>> {
         return new Promise((resolve, reject) => {
-            this.storage.get(WhoIsWhatProvider.storageKey)
+            this.storage.get(WhereIsWhatProvider.storageKey)
                 .then(wohnungen => resolve(wohnungen ? wohnungen : new Array<Wohnung>()))
                 .catch(reject)
         });

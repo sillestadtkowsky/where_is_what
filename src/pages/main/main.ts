@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController } from 'ionic-angular';
-import { WhoIsWhatProvider } from '../../providers/whoIsWhat.provider';
+import { WhereIsWhatProvider } from '../../providers/whereIsWhat.provider';
 import { Wohnung } from '../../models/wohnung.model';
 
 /**
@@ -20,7 +20,7 @@ export class MainPage {
 
   constructor(
     private navCtrl: NavController,
-    private wiwProvider: WhoIsWhatProvider
+    private wiwProvider: WhereIsWhatProvider
   ) {
     this.addCreateHome = true;
    }
