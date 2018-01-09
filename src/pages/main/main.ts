@@ -27,7 +27,7 @@ export class MainPage {
   }
 
   public hasWohnung(): boolean{
-      return this.wiwProvider.getWohnungen.length>0
+      return this.wohnungen && this.wohnungen.length > 0;
   }
 
   createHome() {

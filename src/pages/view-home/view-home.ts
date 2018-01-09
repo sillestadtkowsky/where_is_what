@@ -24,16 +24,16 @@ export class ViewHomePage {
   }
 
   get gegenstandCount() : number {
-    let result = 0;
+      let result = 0;
 
-    if(this.wohnung && this.wohnung.raeume) {
-      this.wohnung.raeume.forEach(raum => {
-        raum.schraenke.forEach(schrank => {
-          result += schrank.gegenstaende.length;
+      if(this.wohnung && this.wohnung.raeume) {
+        this.wohnung.raeume.forEach(raum => {
+          raum.schraenke.forEach(schrank => {
+            result += schrank.gegenstaende.length;
+          });
         });
-      });
-    }
+      }
 
-    return result;
-}
+      return result;
+  }
 }
