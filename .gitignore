@@ -1,5 +1,6 @@
 .sourcemaps/*
 .vscode/*
+www/assets/fonts*
 www/build/*
 www/.DS_Store
 .DS_Store
