@@ -9,7 +9,7 @@ import { WhereIsWhatProvider } from '../../providers/whereIsWhat.provider';
 @IonicPage()
 @Component({
   selector: 'page-createHome',
-  templateUrl: 'createHome.html'
+  templateUrl: 'create-Home.html'
 })
 export class CreateHomePage {
 
