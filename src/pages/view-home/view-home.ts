@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams } from 'ionic-angular';
 
 import { Wohnung } from '../../models/wohnung.model';
 
@@ -13,7 +13,6 @@ export class ViewHomePage {
   private wohnung: Wohnung;
 
   constructor(
-    private navCtrl: NavController,
     private navParams: NavParams) {
       this.wohnung = this.navParams.data;
   }
