@@ -8,50 +8,35 @@ import { Wohnung } from '../models/wohnung.model';
 @Injectable()
 export class WhereIsWhatProvider {
 
-    private static storageKey = 'WhereIsWhatStorage';
+    public static storageKey = 'WhereIsWhatStorage';
 
     constructor(private storage: Storage) { }
 
     public removeWohnung(){
         return new Promise((resolve, reject) => {
-            this.storage.remove(WhereIsWhatProvider.storageKey)
-            this.storage.clear
+            this.storage.remove(WhereIsWhatProvider.storageKey).then(() => {
+                console.log(WhereIsWhatProvider.storageKey+'has been removed');
+              });
         });
     }
 
     public createWohnung(wohnung: Wohnung): Promise<Wohnung> {
         return new Promise((resolve, reject) => {
-            this.storage.get(WhereIsWhatProvider.storageKey)
-                .then(wohnungen => {
-                    if(!wohnungen) {
-                        wohnungen = new Array<Wohnung>();
-                    }
-                    wohnungen.push(wohnung);
-                    this.storage.set(WhereIsWhatProvider.storageKey, wohnungen)
-                        .then(() => {
-                            resolve(wohnung);
-                        })
-                        .catch(reject);
+            this.storage.set(WhereIsWhatProvider.storageKey, wohnung)
+                .then(() => {
+                    resolve(wohnung);
                 })
                 .catch(reject);
         });
     }
 
-    public getWohnungen(): Promise<Array<Wohnung>> {
+    public getWohnung(): Promise<Wohnung>{
         return new Promise((resolve, reject) => {
             this.storage.get(WhereIsWhatProvider.storageKey)
-                .then(wohnungen => resolve(wohnungen ? wohnungen : new Array<Wohnung>()))
-                .catch(reject)
+            .then(() => {
+                    
+            })
+            .catch(reject)
         });
     }
-
-    /* temporary not use
-    private parseAll(raw: Array<any>) {
-        return raw.map(e => this.parse(raw));
-    }
-
-    private parse(raw: any): Wohnung {
-        return _.assign(new Wohnung(), raw);
-    }
-    */
 }

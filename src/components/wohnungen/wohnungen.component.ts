@@ -10,7 +10,7 @@ import { NavController } from 'ionic-angular/navigation/nav-controller';
 export class WohnungenComponent {
 
     @Input()
-    public value: Array<Wohnung>;
+    public value: Wohnung;
 
     constructor(
       private navCtl: NavController

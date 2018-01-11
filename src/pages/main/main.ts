@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController } from 'ionic-angular';
+import { IonicPage, NavController, ToastController } from 'ionic-angular';
 import { WhereIsWhatProvider } from '../../providers/whereIsWhat.provider';
 import { Wohnung } from '../../models/wohnung.model';
 
@@ -15,19 +15,33 @@ import { Wohnung } from '../../models/wohnung.model';
 })
 export class MainPage {
 
-  public wohnungen: Array<Wohnung>;
+  public wohnung: Wohnung;
 
   constructor(
     private navCtrl: NavController,
-    private wiwProvider: WhereIsWhatProvider
+    private wiwProvider: WhereIsWhatProvider,
+    private toaster: ToastController
   ) {}
 
   ionViewWillEnter(): void {
-    this.wiwProvider.getWohnungen().then(wohnungen => this.wohnungen = wohnungen);
+    this.wiwProvider.getWohnung().then(wohnung => this.wohnung = wohnung);
+  }
+
+  removeWohnung(): void{
+    this.wiwProvider.removeWohnung();
+    this.toaster.create({
+      closeButtonText: 'X',
+      dismissOnPageChange: false,
+      cssClass: 'success',
+      position: 'top',
+      duration: 5000,
+      message: 'Wohnung "' + this.wohnung.name + '" wurde entfernt.'
+    }).present();
+    this.navCtrl.push('MainPage');
   }
 
   public hasWohnung(): boolean{
-      return this.wohnungen && this.wohnungen.length > 0;
+    return this.wohnung !=null ? true : false;
   }
 
   createHome() {

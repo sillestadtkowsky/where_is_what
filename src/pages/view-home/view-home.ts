@@ -10,7 +10,7 @@ import { Wohnung } from '../../models/wohnung.model';
 })
 export class ViewHomePage {
 
-  private wohnung: Wohnung;
+  public wohnung: Wohnung;
 
   constructor(
     private navParams: NavParams) {
