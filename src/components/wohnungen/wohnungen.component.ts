@@ -16,8 +16,8 @@ export class WohnungenComponent {
       private navCtl: NavController
     ) {}
 
-    public openWohnung(wohnung: Wohnung): void {
-      this.navCtl.push('ViewHomePage', wohnung);
+    public openWohnung(): void {
+      this.navCtl.push('ViewHomePage', this.value);
     }
 
 }

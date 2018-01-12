@@ -33,8 +33,8 @@ export class WhereIsWhatProvider {
     public getWohnung(): Promise<Wohnung>{
         return new Promise((resolve, reject) => {
             this.storage.get(WhereIsWhatProvider.storageKey)
-            .then(() => {
-                    
+            .then((wohnung) => {
+                resolve(wohnung);
             })
             .catch(reject)
         });

@@ -1,6 +1,6 @@
-<h2 color="primary">angelegte Wohnungen</h2>
-    <li *ngFor="let wohnung of value" class="wohnung" (click)="openWohnung(wohnung)">
-        <span>{{ wohnung.name }}</span>
-        <span class="date">{{ wohnung.date }}</span>
-    </li>
+<h2 color="primary">angelegte Wohnung</h2>
+<div *ngIf="value" (click)="openWohnung()">
+    <span>{{ value.name }}</span>
+    <span class="date">{{ value.date }}</span>
+</div>
 <p *ngIf="!value">Es liegen noch keine Wohnungen vor</p>
