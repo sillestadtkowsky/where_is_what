@@ -1,12 +1,26 @@
 <ion-header>
 
   <ion-navbar color="primary">
-    <ion-title>{{ wohnung?.name }}</ion-title>
+    <ion-title>Deine Wohnung {{ wohnung?.name }}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <p>{{wohnung?.raeume?.length}} erfasste Räume mit {{ gegenstandCount }} zu findenden Dingen</p>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12>
+              <i class="fa fa-home fa-3x" aria-hidden="true"></i><label>{{ wohnung?.name }}</label>
+            </ion-col> 
+        </ion-row>
+        <ion-row>
+            <ion-col col-11>
+              <p>{{ wohnung?.raeume?.length }} erfasste Räume mit {{ gegenstandCount }} zu findenden Dingen</p>
+            </ion-col> 
+            <ion-col col-1 text-right>
+              <i class="fa fa-pencil fa-2x" (click)="editHome()" aria-hidden="true"></i>
+            </ion-col> 
+        </ion-row>
+    </ion-grid> 
 </ion-content>

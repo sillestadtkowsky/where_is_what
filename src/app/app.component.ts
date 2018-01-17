@@ -15,6 +15,7 @@ import { Config, Nav, Platform } from 'ionic-angular';
     <ion-content>
       <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <i class="fa fa-{{p.icon}} {{p.color}}" aria-hidden="true"></i>
           {{p.title}}
         </button>
       </ion-list>
@@ -29,7 +30,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Willkommen', component: 'MainPage' },
+    { title: 'Willkommen', component: 'MainPage', icon: 'book' , color: 'faGreen'},
   ]
 
   constructor(private translate: TranslateService, platform: Platform, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {

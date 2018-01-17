@@ -2,7 +2,7 @@
   <splash></splash>
   <div padding>
       <button *ngIf="!hasWohnung()"  ion-button block (click)="createHome()">{{ 'Erstelle deine Wohnung' | translate }}</button>
-      <button *ngIf="hasWohnung()"  ion-button block (click)="removeWohnung()">{{ 'Wohnung löschen' | translate }}</button>
+      <button *ngIf="hasWohnung()"  ion-button block (click)="viewHome()" [value]="wohnung">{{ 'Herein spaziert' | translate }}</button>
       <wohnungen *ngIf="hasWohnung()" [value]="wohnung"></wohnungen>
   </div>
 </ion-content>

@@ -47,4 +47,8 @@ export class MainPage {
   createHome() {
     this.navCtrl.push('CreateHomePage');
   }
+
+  viewHome(){
+    this.navCtrl.push('ViewHomePage');
+  }
 }

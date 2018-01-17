@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavParams } from 'ionic-angular';
+import { IonicPage,NavController, NavParams } from 'ionic-angular';
 
 import { Wohnung } from '../../models/wohnung.model';
 
@@ -13,7 +13,7 @@ export class ViewHomePage {
   public wohnung: Wohnung;
 
   constructor(
-    private navParams: NavParams) {
+    private navParams: NavParams, private navCtrl: NavController,) {
       this.wohnung = this.navParams.data;
   }
 
@@ -22,6 +22,9 @@ export class ViewHomePage {
   ionViewDidLoad() {
   }
 
+  editHome(){
+    this.navCtrl.push('EditHomePage');
+  }
   get gegenstandCount() : number {
       let result = 0;
 
